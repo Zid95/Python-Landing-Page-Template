@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+:root {
+  --first-color:#2d618c;
+  --second-color:#1e2933;
+  --third-color:#ffd343;
+  --hover-color:#d6e5f2;
+  --background-color:#2b5b84;
+  --transition: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+.header {
+  background-color: var(--background-color);
+  position: relative;
+}
+/*End Header */
+
+.header .container {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* container res */
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1170px;
+  }
+}
+
+
+.header .logo {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:767px) {
+  .header .logo {
+    width: 100%;
+    height: 50px;
+    padding: 20px 0;
+  }
+}
+
+.header .logo img {
+    width: 65px;
+    height: 65px;
+}
+
+@media (max-width:767px) {
+  .header .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.header .navbar {
+  display: flex;
+}
+
+@media (max-width:767px) {
+  .header .navbar {
+    margin: auto;
+  }
+}
+
+
+.header .navbar > li > a {
+  font-size: 16px;
+  font-weight: 500;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  padding: 0 30px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+@media (max-width:767px) {
+  .header .navbar > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 50px;
+  }
+}
+
+
+.header .navbar > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--third-color);
+  top: 0;
+  left: -100%;
+  transition: var(--transition);
+}
+
+.header .navbar > li > a:hover::before {
+  left: 0;
+}
+
+.header .navbar > li > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--third-color);
+  bottom: 0;
+  right: -100%;
+  transition: var(--transition);
+}
+
+.header .navbar > li > a:hover::after {
+  right: 0;
+}
+
+.active{
+  color: var(--third-color) !important;
+}
