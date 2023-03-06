@@ -18,7 +18,30 @@ html {
   margin: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+}
+
+.container {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1170px;
+  }
 }
 
 body {
@@ -38,11 +61,8 @@ ul {
   background-color: var(--background-color);
   position: relative;
 }
-/*End Header */
 
 .header .container {
-  padding: 0 15px 0 15px;
-  margin: 0 auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,23 +71,6 @@ ul {
 }
 
 /* container res */
-@media (min-width: 768px) {
-  .container{
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container{
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container{
-    width: 1170px;
-  }
-}
 
 
 .header .logo {
@@ -109,7 +112,7 @@ ul {
 
 
 .header .navbar > li > a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   height: 100px;
   display: flex;
@@ -164,3 +167,98 @@ ul {
 .active{
   color: var(--third-color) !important;
 }
+
+/*End Header */
+
+/* Start Landing */
+
+.landing {
+  position: relative;
+}
+
+.landing::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:var(--hover-color);
+  z-index: -100;
+  transform: skewY(-10deg);
+  transform-origin:top left ;
+}
+
+
+@media (max-width: 767px) {
+  .landing::before{
+    transform: skewY(-35deg);
+    transform-origin:top left ;
+
+  }
+}
+
+.landing .container {
+  min-height: calc(100vh - 100px );
+  display: flex;
+  align-items: center;
+}
+
+.landing .text {
+  flex: 1;
+}
+
+@media (max-width: 992px) {
+  .landing .text{
+    text-align: center;
+  }
+}
+
+.landing .text h1{
+  font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .landing .text h1{
+      margin: auto;
+      font-size: 25px;
+
+  }
+}
+
+.landing .text p{
+  line-height: 2.1;
+  color:#666;
+  max-width: 500px;
+  
+}
+
+@media (max-width: 992px) {
+  .landing .text p{
+      margin: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing .text p{
+      margin: auto;
+      font-size: 18px;
+      color: var(--second-color);
+  }
+}
+
+.landing .image img {
+  width: 600px;
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .landing .image img{
+    display: none;
+  }
+}
+
+
+
+
+/* End Start Landing */
