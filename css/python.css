@@ -409,9 +409,11 @@ ul {
 
 .landing .image img {
   position: relative;
+  left: 35px;
   width: 600px;
   max-width: 100%;
   animation: image 5s linear infinite;
+
 }
 
 @media (max-width: 992px) {
@@ -421,9 +423,63 @@ ul {
 }
 
 
+/* End Landing */
 
-/* End Start Landing */
+/* Start Cards */
+.cards {
+  padding: 25px 0;
+}
 
+.cards .container {
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+gap: 30px;
+}
+
+.cards .container .box {
+  overflow: hidden;
+  box-shadow:0 2px 15px rgba(0 0 0 / 10%) ;
+  transition: var(--transition);
+  border-radius: 7px;
+}
+
+.cards .container .box:hover {
+  transform: translateY(-10px);
+  box-shadow:0 2px 15px rgba(0 0 0 / 20%) ;
+}
+
+.cards .container .box img{
+  width: 100%;
+  max-width: 100%;
+  height: 206.22px;
+}
+
+.cards .container .box .content {
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.cards .container .box .content h3 , p {
+  color: #666;
+}
+
+.cards .container .box .info {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #666;
+}
+
+.cards .container .box .info a {
+  text-align: center;
+  background-color: var(--background-color);
+  color: #fff;
+  width: 100%;
+  padding: 5px 0;
+  font-weight: 700;
+}
+/* End Cards */
 
 
 @keyframes image {
