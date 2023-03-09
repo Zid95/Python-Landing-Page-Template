@@ -427,7 +427,7 @@ ul {
 
 /* Start Cards */
 .cards {
-  padding: 25px 0;
+  padding: 100px 0;
 }
 
 .cards .container {
@@ -481,6 +481,48 @@ gap: 30px;
 }
 /* End Cards */
 
+/* Start about */
+
+footer {
+  padding: 100px 0;
+  background-color: var(--background-color);
+}
+
+@media (max-width: 767px) {
+  footer{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    
+  }
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 30px;
+}
+
+footer .container h2 {
+  color: #fff;
+  font-weight: 500;
+}
+
+footer .container li {
+  margin-top: 10px;
+
+}
+
+footer .container a {
+  color: #fff;
+  font-weight: 300;
+}
+
+footer .container a:hover {
+  color: var(--third-color);
+}
+
+/* End about */
 
 @keyframes image {
   0%,100%{
